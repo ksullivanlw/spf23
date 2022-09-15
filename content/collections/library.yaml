@@ -1,0 +1,8 @@
+title: 'Library News'
+template: default
+layout: layout
+mount: 9e18764e-4513-4f9f-9ec8-fb5a7db97d75
+revisions: false
+route: '/library/{post_type}/{slug}/{day}/{month}/{year}'
+date: true
+sort_dir: asc

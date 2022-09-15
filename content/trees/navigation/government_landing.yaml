@@ -1,0 +1,39 @@
+tree:
+  -
+    id: 45974adf-c3e9-4330-8433-73cde7955f94
+    title: 'Get information on Boards and Commission'
+    url: '#'
+    data:
+      detailed_description: 'Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.'
+      icon: fa-people-group
+  -
+    id: 6f930116-c101-4fb5-86f6-981c00a4b180
+    title: 'Get Information on City Commission Meetings'
+    url: '#'
+    data:
+      detailed_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam'
+      icon: fa-calendar-day
+  -
+    id: 3d5844d6-9f50-4525-b84e-d8ad95ee8233
+    title: 'Email your City Commissioner'
+    url: '#'
+    data:
+      icon: fa-paper-plane-top
+  -
+    id: 10dcc903-2f83-4300-b819-2259431afe89
+    title: 'View the City''s Strategic Plan'
+    url: '#'
+    data:
+      icon: fa-ruler-combined
+  -
+    id: d85a4765-6dc4-4d98-9a13-434257b8ed72
+    title: 'View the District Map'
+    url: '#'
+    data:
+      icon: fa-map-location-dot
+  -
+    id: 07398327-fc00-4142-a802-1aefec1879ec
+    title: 'Submit your public comment for meetings'
+    url: '#'
+    data:
+      icon: fa-comment-captions

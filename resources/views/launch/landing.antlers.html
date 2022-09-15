@@ -1,0 +1,66 @@
+{{#
+	@name Layout
+	@desc The default layout file.
+#}}
+
+<!-- /layout.antlers.html -->
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <script src="https://kit.fontawesome.com/4d7cf1742f.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{{ mix src='css/site.css' }}">
+        <script src="{{ mix src='/js/site.js' }}" defer></script>
+
+        {{# Replace the following line with the SEO Pro or Aardvark SEO tag if you want to use an addon for SEO. Also remove the seo section in you page blueprint.#}}
+        {{ partial:snippets/seo }}
+
+        {{ partial:snippets/browser_appearance }}
+    </head>
+    <body class="flex flex-col min-h-screen bg-gray-50 selection:bg-primary selection:text-white">
+        {{ partial:snippets/noscript }}
+        {{ partial:navigation/skip_to_content }}
+ 
+
+        {{# Remove the following line if you want to use an addon for SEO. #}}
+        {{ yield:seo_body }}
+
+        {{ partial:hero/2022hero }}
+        
+        {{ template_content }}
+
+        {{ partial:2022/footermain }}
+        {{ partial:layout/footer }}
+
+    </body>
+    <!-- Tippy.js -->
+<!-- https://atomiks.github.io/tippyjs/v6 -->
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+ 
+<!-- Source -->
+<script>
+    document.addEventListener('alpine:init', () => {
+        // Magic: $tooltip
+        Alpine.magic('tooltip', el => message => {
+            let instance = tippy(el, { content: message, trigger: 'manual' })
+ 
+            instance.show()
+ 
+            setTimeout(() => {
+                instance.hide()
+ 
+                setTimeout(() => instance.destroy(), 150)
+            }, 2000)
+        })
+ 
+        // Directive: x-tooltip
+        Alpine.directive('tooltip', (el, { expression }) => {
+            tippy(el, { content: expression })
+        })
+    })
+</script>
+</html>
+<!-- End: /layout.antlers.html -->

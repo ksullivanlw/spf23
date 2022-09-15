@@ -1,0 +1,57 @@
+<div class="bg-gray-50">
+    <div class="max-w-7xl mx-auto pt-12 pb-4 sm:px-6 lg:px-8">
+        <div class="bg-gray-50 pt-4 pb-20 lg:pt-4 lg:pb-28">
+            <div class="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl">
+                <div>
+                    <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">Meeting Notices
+                    </h2>
+                    <p class="mt-3 text-xl text-gray-500 sm:mt-4">Find our weekly notices here or click the button
+                        below!</p>
+                </div>
+                <div class="mt-12 grid gap-16 pt-12 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12 flex">
+                    {{ collection from="meeting_notices" sort="meeting_date:asc" }}
+                    <div class="flex flex-col">
+                        <div class="flex-1">
+                            <a href="#" class="inline-block">
+                                <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium 
+                                    
+                                    {{ if meeting_type == 'city-commission' }}
+                                    bg-lighterblue text-indigo-800
+                                    {{ elseif meeting_type == 'special-magistrate' }}
+                                    bg-green-100 text-green-800
+                                    {{ elseif meeting_type | contains:advisory-board }}
+                                    bg-purplebeach text-lighterpurple
+                                    {{ /if }}
+                                     ">
+                                    {{ meeting_type:label }} </span>
+                            </a>
+                        
+                        <a href="#" class="block mt-4">
+                            <p class="text-xl font-semibold text-gray-900 flex-1">{{ title }}</p>
+                            <p class="mt-3 text-base text-gray-500">{{ content | striptags | truncate:130:... }}</p>
+                            
+                        </a>
+                        
+                    </div>
+                        <hr class="mt-6">
+                        
+
+                        <div class="mt-6 flex items-center">
+                            <div class="">
+                                <p class="text-sm font-medium text-gray-900">
+                                    <a href="#"> Meeting Date </a>
+                                </p>
+                                <div class="flex space-x-1 text-sm text-gray-500">
+                                    {{ meeting_date }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{ /collection }}
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

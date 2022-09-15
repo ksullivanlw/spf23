@@ -1,0 +1,95 @@
+<div class="relative z-50" aria-labelledby="slide-over-title" role="dialog" aria-modal="true" x-show="open"
+style="display: none"
+x-on:keydown.escape.prevent.stop="open = false"
+role="dialog"
+aria-modal="true"
+x-id="['modal-title']"
+:aria-labelledby="$id('modal-title')">
+<!-- Overlay -->
+<div x-show="open" x-transition.opacity class="fixed inset-0 bg-black bg-opacity-50"></div>
+
+    <div class="fixed inset-0"></div>  
+    <div class="fixed inset-0 overflow-hidden" x-show="open" x-transition
+    x-on:click="open = false">
+      <div class="absolute inset-0 overflow-hidden" x-on:click.stop
+      x-trap.noscroll.inert="open">
+        <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10 sm:pl-16">
+          <div class="pointer-events-auto w-screen max-w-2xl">
+            <div class="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
+              <div class="px-4 py-6 sm:px-6 bg-bluebeach">
+                <div class="flex items-start justify-between">
+                  <h2 class="text-lg font-medium text-white"></h2>
+                  <div class="ml-3 flex h-7 items-center">
+                    <button type="button" class="rounded-md bg-bluebeach text-white hover:text-gray-500 focus:ring-2 focus:ring-bluebeach" x-on:click="open = false">
+                      <span class="sr-only">Close panel</span>
+                      <!-- Heroicon name: outline/x -->
+                      <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Main -->
+              <div class="divide-y divide-gray-200">
+                <div class="pb-6">
+                  <div class="h-24 bg-bluebeach sm:h-20 lg:h-28"></div>
+                  <div class="lg:-mt-15 -mt-12 flow-root px-4 sm:-mt-8 sm:flex sm:items-end sm:px-6">
+                    <div>
+                      <div class="-m-1 flex">
+                        <div class="inline-flex overflow-hidden rounded-lg border-4 border-white">
+                          <img class="h-24 w-24 flex-shrink-0 sm:h-40 sm:w-40 lg:h-48 lg:w-48 object-cover" src="https://lakeworthbeachfl.gov/wp-content/uploads/2022/05/Mayor-Betty-Resch-2022-768x960.jpg" alt="">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mt-6 sm:ml-6 sm:flex-1">
+                      <div>
+                        <div class="flex items-center">
+                          <h3 class="text-xl font-bold text-gray-900 sm:text-2xl">
+                              <span class="text-lg text-gray-500 font-normal">Mayor<br></span>Betty Resch</h3>
+                        </div>
+                      </div>
+                      <div class="mt-5 flex flex-wrap space-y-3 sm:space-y-0 sm:space-x-3">
+                        <button type="button" class="inline-flex w-full flex-shrink-0 items-center justify-center rounded-md border border-transparent bg-bluebeach px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-bluebeach focus:outline-none focus:ring-2 focus:ring-bluebeach focus:ring-offset-2 sm:flex-1">Message</button>
+                        <button type="button" class="inline-flex w-full flex-1 items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-bluebeach focus:ring-offset-2">Call</button>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-4 py-5 sm:px-0 sm:py-0">
+                  <dl class="space-y-8 sm:space-y-0 sm:divide-y sm:divide-gray-200">
+                    <div class="sm:flex sm:px-6 sm:py-5">
+                      <dt class="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0 lg:w-48">Bio</dt>
+                      <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0 sm:ml-6">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac elit metus. Cras eu metus quis turpis mattis eleifend a a sapien. Sed vitae odio varius, maximus ante eu, pellentesque turpis. Sed rutrum tristique orci, eget dapibus mauris condimentum et. Aenean fringilla scelerisque tincidunt. Duis pellentesque scelerisque turpis ut pulvinar. Ut malesuada lorem eu ipsum ultrices sodales. In vel magna sem.<br><br>
+
+                            Donec sodales condimentum luctus. Donec tempus sem nec elit vehicula, vel rhoncus quam sagittis. Duis dapibus euismod arcu, vel ullamcorper risus feugiat laoreet. Duis sit amet augue at ex cursus maximus. Aenean magna mi, sagittis ut lorem eget, mattis posuere est. Vestibulum elementum erat ut lectus placerat commodo. Fusce imperdiet commodo ex, in ornare metus fermentum id. Cras consequat tellus tempor lorem scelerisque pulvinar. Pellentesque non interdum ligula. Suspendisse ultricies turpis ut augue finibus, sit amet aliquet diam scelerisque. In ac fringilla purus. Donec sit amet orci ante. Maecenas ultrices lacus a mauris maximus tincidunt. Proin posuere sem vitae tellus faucibus, a fermentum quam lobortis. Aenean sit amet ligula sed dui lobortis dignissim ut ac elit. Nullam facilisis pharetra accumsan.<br><br>
+                            
+                           </p>
+                      </dd>
+                    </div>
+                    <div class="sm:flex sm:px-6 sm:py-5">
+                      <dt class="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0 lg:w-48">Info</dt>
+                      <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0 sm:ml-6">Sed rutrum tristique orci, eget dapibus mauris condimentum et.</dd>
+                    </div>
+                    <div class="sm:flex sm:px-6 sm:py-5">
+                      <dt class="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0 lg:w-48">Info </dt>
+                      <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0 sm:ml-6">Sed rutrum tristique orci, eget dapibus mauris condimentum et.</dd>
+                    </div>
+                    <div class="sm:flex sm:px-6 sm:py-5">
+                      <dt class="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0 lg:w-48">Info</dt>
+                      <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0 sm:ml-6">
+                        Sed rutrum tristique orci, eget dapibus mauris condimentum et.
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

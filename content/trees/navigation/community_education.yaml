@@ -1,0 +1,17 @@
+tree:
+  -
+    id: 72800412-a12e-480c-be28-fb45bfa5a2f4
+    title: 'Charter Schools'
+    url: '#'
+  -
+    id: a9f4aacc-0df6-4228-842a-e961d5fe2d2b
+    title: 'Public Schools'
+    url: '#'
+  -
+    id: e7dc9cb7-98d3-4b29-bad7-f8acd521e089
+    title: 'Private Schools'
+    url: '#'
+  -
+    id: b6359393-755c-4ab1-a3d2-c8849e8ffdd5
+    title: 'Higher Education'
+    url: '#'

@@ -1,0 +1,21 @@
+tree:
+  -
+    id: ef93c3a4-eaf0-4cd2-a146-fa085be552b1
+    title: 'City Manager'
+    url: '#'
+  -
+    id: 1a0828c0-b876-46ba-bff1-ded341a34e8b
+    title: 'Public Communications'
+    url: '#'
+  -
+    id: 86e7fde6-27ab-4e29-9e0f-aca956bdaefb
+    title: 'City Wide Projects'
+    url: 'https://lakeworth.maps.arcgis.com/apps/Shortlist/index.html?appid=a50fac6704d3437c927ad7a91d9d4792'
+  -
+    id: d6196c82-f55c-4921-b9c4-f6abfad17f60
+    title: 'One Cent Sales Surtax'
+    url: '#'
+  -
+    id: e11ae5a5-8a3e-4e95-9628-b25c95a4eab8
+    title: 'Strategic Plan'
+    url: '#'

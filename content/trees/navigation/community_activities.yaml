@@ -1,0 +1,17 @@
+tree:
+  -
+    id: 90093ab1-9693-4e68-8726-3988a69182f3
+    title: 'Beach & Pier'
+    url: '#'
+  -
+    id: 70feac27-f256-4ad9-92c7-b0ff940cc1a1
+    title: 'Golf Club'
+    url: 'https://www.lakeworthbeachgolfclub.com/'
+  -
+    id: 992465be-9bc8-461d-9e76-b618a9cdb85f
+    title: 'Special Events'
+    url: '#'
+  -
+    id: aa16095d-b974-42e4-bf77-b92de25433ca
+    title: 'Recreation Center'
+    url: '#'

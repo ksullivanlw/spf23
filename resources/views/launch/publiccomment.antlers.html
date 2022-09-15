@@ -1,0 +1,255 @@
+<form class="space-y-8 divide-y divide-gray-200 rounded-lg bg-white p-8" action="https://getform.io/f/f6c8b428-0c25-402b-8876-2fbe73e6e46c" method="POST">
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <div class="rounded-md bg-lighterblue p-4">
+        <div class="flex">
+            <div class="flex-shrink-0">
+                <!-- Heroicon name: solid/information-circle -->
+                <svg class="h-5 w-5 text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                    fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                        clip-rule="evenodd" />
+                </svg>
+            </div>
+            <div class="ml-3 flex-1 md:flex md:justify-between">
+                <p class="text-sm text-blue-700">Comments Must be Submitted 15 Minutes Prior to Meeting Start Unless
+                    Otherwise Noted
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="space-y-8 divide-y divide-gray-200 pt-4">
+        <div>
+            <div>
+                <h3 class="text-lg leading-6 font-medium text-gray-900">Important Information</h3>
+                <p class="mt-1 text-sm text-gray-500">A separate card is necessary for each agenda item to be addressed.
+                </p>
+                <a href="" class="mt-1 text-sm text-purplebeach">Please use this link to see a list of upcoming meetings
+                    to make the proper selection.</a>
+
+            </div>
+
+            <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+                <div class="sm:col-span-3">
+                    <label for="meetingdate" class="block text-sm font-medium text-gray-700"> Meeting Date </label>
+                    <div class="mt-1">
+                        <select id="meetingdate" name="meetingdate" autocomplete="" required
+                            class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                            <option></option>
+                            <option>1/12/2023</option>
+                            <option>1/22/2023</option>
+                            <option>2/12/2023</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="sm:col-span-3">
+                    <label for="meetingtopic" class="block text-sm font-medium text-gray-700"> Public Comment Topic
+                    </label>
+                    <div class="mt-1">
+                        <select id="meetingtopic" name="meetingtopic" autocomplete="" required
+                            class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                            <option></option>
+                            <option>Public Participation of non-agendaed items &amp; consent agenda</option>
+                            <option>Public Hearing</option>
+                            <option>New Business</option>
+                            <option>Unfinished Business</option>
+                            <option>Work Session</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="sm:col-span-6">
+                    <label for="meetingtopic" class="block text-sm font-medium text-gray-700"> Choose which item your
+                        comment corresponds with </label>
+                    <div class="mt-1">
+                        <select id="meetingtopic" name="meetingtopic" autocomplete="" required
+                            class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                            <option></option>
+                            <option>a</option>
+                            <option>b</option>
+                            <option>c</option>
+                            <option>d</option>
+                            <option>e</option>
+                            <option>f</option>
+                            <option>g</option>
+                            <option>h</option>
+                            <option>i</option>
+                            <option>j</option>
+                            <option>k</option>
+                            <option>l</option>
+                            <option>m</option>
+                            <option>n</option>
+                            <option>o</option>
+                            <option>p</option>
+                            <option>q</option>
+                            <option>r</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="pt-6 divide-y divide-gray-200 sm:col-span-6">
+                    <div class="">
+                        <div>
+                            <h2 class="text-lg leading-6 font-medium text-gray-900">Details</h2>
+                            <p class="mt-1 text-sm text-gray-500">Please use the toggles below define your choices.
+                                (Green is "For" or Yes").</p>
+                        </div>
+                        <ul role="list" class="mt-2 divide-y divide-gray-200">
+
+
+                            <li class="py-4 flex items-center justify-between" x-data="{ value: false }"
+                                x-id="['toggle-label']">
+                                <div class="flex flex-col">
+                                    <p class="text-sm font-medium text-gray-900" id="privacy-option-1-label">For or
+                                        Against?</p>
+                                    <p class="text-sm text-gray-500" id="privacy-option-1-description">If you are
+                                        <strong>FOR</strong> this item please click the toggle button.</p>
+                                </div>
+                                <!-- Enabled: "bg-teal-500", Not Enabled: "bg-gray-200" -->
+                                <input type="hidden" name="forTopic" :value="value">
+                                <!-- Button -->
+                                <button x-ref="toggle" @click="value = ! value" type="button" role="switch"
+                                    :aria-checked="value" :aria-labelledby="$id('toggle-label')"
+                                    :class="value ? 'bg-green-500' : 'bg-white border-2'"
+                                    class="bg-gray-200 ml-4 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500">
+                                    <span :class="value ? 'bg-white translate-x-5' : 'bg-white'"
+                                        class="h-5 w-5 rounded-full transition" aria-hidden="true"></span>
+                                </button>
+                            </li>
+
+                            <li class="py-4 flex items-center justify-between" x-data="{ value: false }"
+                                x-id="['toggle-label']">
+                                <div class="flex flex-col">
+                                    <p class="text-sm font-medium text-gray-900" id="privacy-option-1-label">Join Via
+                                        Zoom?</p>
+                                    <p class="text-sm text-gray-500" id="privacy-option-1-description">If you would like
+                                        to join this meeting via Zoom please click the Toggle Button.</p>
+                                </div>
+                                <!-- Enabled: "bg-teal-500", Not Enabled: "bg-gray-200" -->
+                                <input type="hidden" name="joinViaZoom" :value="value">
+                                <!-- Button -->
+                                <button x-ref="toggle" @click="value = ! value" type="button" role="switch"
+                                    :aria-checked="value" :aria-labelledby="$id('toggle-label')"
+                                    :class="value ? 'bg-green-500' : 'bg-white border-2'"
+                                    class="bg-gray-200 ml-4 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500">
+                                    <span :class="value ? 'bg-white translate-x-5' : 'bg-white'"
+                                        class="h-5 w-5 rounded-full transition" aria-hidden="true"></span>
+                                </button>
+                            </li>
+
+                            <li class="py-4 flex items-center justify-between" x-data="{ value: false }"
+                            x-id="['toggle-label']">
+                            <div class="flex flex-col">
+                                <p class="text-sm font-medium text-gray-900" id="privacy-option-1-label">Have City
+                                    Read My Comments</p>
+                                <p class="text-sm text-gray-500" id="privacy-option-1-description">If you are not
+                                    participating in person or via zoom and would like the city to read your
+                                    comments please click this toggle.</p>
+                            </div>
+                            <!-- Enabled: "bg-teal-500", Not Enabled: "bg-gray-200" -->
+                            <input type="hidden" name="readMyComments" :value="value">
+                            <!-- Button -->
+                            <button x-ref="toggle" @click="value = ! value" type="button" role="switch"
+                                :aria-checked="value" :aria-labelledby="$id('toggle-label')"
+                                :class="value ? 'bg-green-500' : 'bg-white border-2'"
+                                class="bg-gray-200 ml-4 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500">
+                                <span :class="value ? 'bg-white translate-x-5' : 'bg-white'"
+                                    class="h-5 w-5 rounded-full transition" aria-hidden="true"></span>
+                            </button>
+                        </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="sm:col-span-6 pt-8 pb-8">
+                        <label for="publicComments" class="block text-sm font-medium text-gray-700"> Comments to be read into
+                            record </label>
+                        <div class="mt-1">
+                            <textarea id="publicComments" name="publicComments" rows="3"
+                                class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md"></textarea>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-500">Please only fill this out if you will not be attending in
+                            person or via Zoom.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8">
+                <div>
+                    <h3 class="text-lg leading-6 font-medium text-gray-900">Demographic &amp; Personal Information</h3>
+                    <p class="mt-1 text-sm text-gray-500">Use a permanent address where you can receive mail.</p>
+                </div>
+                <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+                    <div class="sm:col-span-3">
+                        <label for="first-name" class="block text-sm font-medium text-gray-700"> First name </label>
+                        <div class="mt-1">
+                            <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+                                class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-3">
+                        <label for="last-name" class="block text-sm font-medium text-gray-700"> Last name </label>
+                        <div class="mt-1">
+                            <input type="text" name="last-name" id="last-name" autocomplete="family-name"
+                                class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-6">
+                        <label for="email" class="block text-sm font-medium text-gray-700"> Email address </label>
+                        <div class="mt-1">
+                            <input id="email" name="email" type="email" autocomplete="email"
+                                class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-6">
+                        <label for="street-address" class="block text-sm font-medium text-gray-700"> Street address
+                        </label>
+                        <div class="mt-1">
+                            <input type="text" name="street-address" id="street-address" autocomplete="street-address"
+                                class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-2">
+                        <label for="city" class="block text-sm font-medium text-gray-700"> City </label>
+                        <div class="mt-1">
+                            <input type="text" name="city" id="city" autocomplete="address-level2"
+                                value="Lake Worth Beach"
+                                class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-2">
+                        <label for="state" class="block text-sm font-medium text-gray-700"> State / Province </label>
+                        <div class="mt-1">
+                            <input type="text" name="state" id="state" autocomplete="address-level1" value="FL"
+                                class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-2">
+                        <label for="postal-code" class="block text-sm font-medium text-gray-700"> ZIP / Postal code
+                        </label>
+                        <div class="mt-1">
+                            <input type="text" name="postal-code" id="postal-code" autocomplete="postal-code"
+                                class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="pt-5">
+            <div class="flex justify-end">
+                <!--<button type="button"
+                class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Cancel</button>-->
+                <button type="submit"
+                    class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-bluebeach hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Submit
+                    Comment</button>
+            </div>
+        </div>
+</form>

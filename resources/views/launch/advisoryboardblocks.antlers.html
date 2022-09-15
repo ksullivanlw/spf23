@@ -1,0 +1,80 @@
+<div class="inset-0 py-6 px-4 sm:px-6 lg:px-8">
+    <!--rounded borderbox <div class="h-full border-2 border-gray-200 border-dashed rounded-lg"></div>-->
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <div class="bg-white px-4 py-5 border-b border-gray-200 sm:px-6 mb-4">
+        <div class="-ml-4 -mt-4 flex justify-between items-center flex-wrap sm:flex-nowrap">
+            <div class="ml-4 mt-4">
+                <div class="flex items-center">
+                    <div class="">
+                        <h3 class="text-lg leading-6 font-medium text-gray-900">Advisory Boards</h3>
+                        <p class="text-sm text-gray-500">
+                            <a href="#"> If you are interested in applying for a board / Committee
+                                position, please use the buttons to apply or inquire for additional
+                                details.
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="ml-4 mt-4 flex-shrink-0 flex">
+                <button type="button"
+                    class="relative inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    <i class="fa-solid fa-clipboard-list text-gray-400 pr-2"></i>
+                    <span> Application </span>
+                </button>
+                <button type="button"
+                    class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    <!-- Heroicon name: solid/mail -->
+                    <i class="fa-solid fa-circle-question pr-2 text-gray-400"></i>
+                    <span> Questions </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <ul role="list" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {{ collection:city_advisory_boards }}
+        <li class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200">
+            <div class="w-full flex items-center justify-between p-6 space-x-6">
+                <div class="flex-1 truncate">
+                    <div class="flex items-center space-x-3">
+                        <h3 class="text-gray-900 text-sm font-medium truncate" x-data
+                        x-tooltip="{{ title }}">{{ title }}</h3>
+                        <span
+                            class="flex-shrink-0 inline-block px-2 py-0.5 
+                            {{ if vacancies=='Full' }}
+                            text-red-800 text-xs font-medium bg-red-100 
+                            {{ elseif vacancies=='Terms Expiring' }}
+                            text-yellow-800 text-xs font-medium bg-yellow-100 
+                            {{ elseif vacancies=='Vacancies' }}
+                            text-green-800 text-xs font-medium bg-green-100 
+                            {{ /if }} rounded-full">{{ vacancies }}</span>
+                    </div>
+                    <p class="mt-1 text-gray-500 text-sm truncate"><a href="{{ url }}">View Details &amp;
+                            Members</a></p>
+                </div>
+            </div>
+            <div>
+                <div class="-mt-px flex divide-x divide-gray-200">
+                    <div class="w-0 flex-1 flex">
+                        <a href="mailto:{{board_email_address}}"
+                            class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
+                            <!-- Heroicon name: solid/mail -->
+                            <i class="fa-solid fa-envelope text-gray-400"></i>
+                            <span class="ml-3">Email Board</span>
+                        </a>
+                    </div>
+                    <div class="-ml-px w-0 flex-1 flex">
+                        <a href="https://lakeworthbeachfl.gov/government/advisory-board-agendas-and-minutes/"
+                            class="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-br-lg hover:text-gray-500">
+                            <i class="fa-solid fa-calendar-lines text-gray-400"></i>
+                            <span class="ml-3">Agendas</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        {{ /collection:city_advisory_boards }}
+    </ul>
+
+</div>

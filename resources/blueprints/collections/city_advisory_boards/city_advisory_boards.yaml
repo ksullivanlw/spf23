@@ -1,0 +1,70 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+          display: 'Board Name'
+          instructions_position: above
+          listable: hidden
+          visibility: visible
+          input_type: text
+          antlers: false
+      -
+        handle: board_email_address
+        field:
+          input_type: text
+          antlers: false
+          display: 'Board Email Address'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: board_members
+        field:
+          display: 'Board Members'
+          type: list
+          icon: list
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: vacancies
+        field:
+          options:
+            Full: Full
+            'Terms Expiring': 'Terms Expiring'
+            Vacancies: Vacancies
+          multiple: false
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          display: Vacancies
+          type: select
+          icon: select
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: content
+        field:
+          type: markdown
+          localizable: true
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+title: 'City Advisory Boards'

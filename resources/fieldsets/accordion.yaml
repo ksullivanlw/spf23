@@ -1,0 +1,62 @@
+title: Accordion
+fields:
+  -
+    handle: accordion_components
+    field:
+      display: Accordion
+      type: section
+      icon: section
+      listable: hidden
+      instructions_position: above
+  -
+    handle: accordion_title
+    field:
+      input_type: text
+      antlers: false
+      display: 'Accordion Title'
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+  -
+    handle: accordion_sub_heading
+    field:
+      input_type: text
+      antlers: false
+      display: 'Accordion Sub Heading'
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+  -
+    handle: accordion_field
+    field:
+      collapse: false
+      sets:
+        add_accordion:
+          display: 'Add Accordion'
+          fields:
+            -
+              handle: header
+              field:
+                input_type: text
+                antlers: false
+                display: Header
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+            -
+              handle: accordion_content
+              field:
+                antlers: false
+                display: 'Accordion Content'
+                type: textarea
+                icon: textarea
+                listable: hidden
+                instructions_position: above
+      display: 'Accordion Field'
+      type: replicator
+      icon: replicator
+      listable: hidden
+      instructions_position: above

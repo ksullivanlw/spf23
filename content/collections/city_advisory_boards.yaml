@@ -1,0 +1,9 @@
+title: 'City Advisory Boards'
+template: launch/sidebar
+layout: launch/landing
+revisions: false
+route: '/advisory-boards/{slug}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private

@@ -1,0 +1,170 @@
+<div x-data="{
+    open: false,
+    toggle() {
+        if (this.open) {
+            return this.close()
+        }
+
+        this.$refs.button.focus()
+
+        this.open = true
+    },
+    close(focusAfter) {
+        if (! this.open) return
+
+        this.open = false
+
+        focusAfter && focusAfter.focus()
+    }
+}"
+x-on:keydown.escape.prevent.stop="close($refs.button)"
+x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
+x-id="['dropdown-button']">
+    <button type="button" class="text-gray-500 group bg-white rounded-md inline-flex items-center text-md font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 uppercase" aria-expanded="false" x-ref="button"
+    x-on:click="toggle()"
+    :aria-expanded="open"
+    :aria-controls="$id('dropdown-button')"
+    type="button">
+      <span class="text-sm">How Do I</span>
+      <svg class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+      </svg>
+    </button>
+    <div class="md:block absolute z-10 top-full inset-x-0 transform shadow-lg" >
+      <div class="absolute inset-0 flex">
+        <div class="bg-white w-1/2"></div>
+        <div class="bg-gray-50 w-1/2"></div>
+      </div>
+      <div class="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2" x-ref="panel"
+      x-show="open"
+      x-transition.origin.top.left
+      x-on:click.outside="close($refs.button)"
+      :id="$id('dropdown-button')"
+      style="display: none;">
+        <nav class="grid gap-y-10 px-4 py-8 bg-white sm:grid-cols-2 lg:grid-cols-3 sm:gap-x-8 sm:py-12 sm:px-6 lg:px-8 xl:pr-12">
+          <div>
+            <h3 class="text-sm font-medium tracking-wide text-gray-500 uppercase pb-2">
+              Apply For
+            </h3>
+            <hr>
+            <ul role="list" class="mt-8 space-y-6">
+              {{ nav:how_do_i_apply_for }}
+              <li class="flow-root">
+                <a href="{{ url }}" class="-m-3 -mt-8 p-3 flex items-center rounded-md text-xs font-medium text-gray-900 hover:bg-gray-50">
+                  <span class="">{{ title }}</span>
+                </a>
+              </li>
+              {{ /nav:how_do_i_apply_for }}
+            </ul>
+            <h3 class="text-sm font-medium tracking-wide text-gray-500 uppercase pb-2 pt-4">
+              Community Activities
+            </h3>
+            <hr>
+            <ul role="list" class="mt-8 space-y-6">
+              {{ nav:community_activities }}
+              <li class="flow-root">
+                <a href="{{ url }}" class="-m-3 -mt-8 p-3 flex items-center rounded-md text-xs font-medium text-gray-900 hover:bg-gray-50">
+                  <span class="">{{ title }}</span>
+                </a>
+              </li>
+              {{ /nav:community_activities }}
+            </ul>
+            <h3 class="text-sm font-medium tracking-wide text-gray-500 uppercase pb-2 pt-4">
+              Education
+            </h3>
+            <hr>
+            <ul role="list" class="mt-8 space-y-6">
+              {{ nav:community_education }}
+              <li class="flow-root">
+                <a href="{{ url }}" class="-m-3 -mt-8 p-3 flex items-center rounded-md text-xs font-medium text-gray-900 hover:bg-gray-50">
+                  <span class="">{{ title }}</span>
+                </a>
+              </li>
+              {{ /nav:community_education }}
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-sm font-medium tracking-wide text-gray-500 uppercase pb-2">
+             Find
+            </h3>
+            <hr>
+            <ul role="list" class="mt-8 space-y-6">
+              {{ nav:how_do_i_find }}
+              <li class="flow-root">
+                <a href="{{ url }}" class="-m-3 -mt-8 p-3 flex items-center rounded-md text-xs font-medium text-gray-900 hover:bg-gray-50">
+                  <span class="">{{ title }}</span>
+                </a>
+              </li>
+              {{ /nav:how_do_i_find }}
+            </ul>
+           
+             
+            
+
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-sm font-medium tracking-wide text-gray-500 uppercase pb-2">
+              Services
+             </h3>
+             <hr>
+             <ul role="list" class="mt-8 space-y-6">
+               {{ nav:community_services }}
+               <li class="flow-root">
+                 <a href="{{ url }}" class="-m-3 -mt-8 p-3 flex items-center rounded-md text-xs font-medium text-gray-900 hover:bg-gray-50">
+                   <span class="">{{ title }}</span>
+                 </a>
+               </li>
+               {{ /nav:community_services }}
+             </ul>
+
+            </ul>
+          </div>
+        </nav>
+        <div class="bg-gray-50 px-4 py-8 sm:py-12 sm:px-6 lg:px-8 xl:pl-12">
+          <div>
+            <h3 class="text-sm font-medium tracking-wide text-gray-500 uppercase">
+              Latest News
+            </h3>
+            <ul role="list" class="mt-6 space-y-6">
+              <li class="flow-root">
+                <a href="#" class="-m-3 p-3 flex rounded-lg hover:bg-gray-100">
+                  <div class="hidden sm:block flex-shrink-0">
+                    <img class="w-32 h-20 object-cover rounded-md" src="https://images.unsplash.com/photo-1558478551-1a378f63328e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2849&q=80" alt="">
+                  </div>
+                  <div class="w-0 flex-1 sm:ml-8">
+                    <h4 class="text-base font-medium text-gray-900 truncate">
+                      Residential Beach Parking Permits Available May 1
+                    </h4>
+                    <p class="mt-1 text-sm text-gray-500">
+                      The beach decal period is effective May 1, 2022 to April 30, 2023. The price will be $64.20 for residents (including tax) and $96.30 for seasonal residents (including tax).  <span class="text-purplebeach">Read More...</span>
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="flow-root">
+                <a href="#" class="-m-3 p-3 flex rounded-lg hover:bg-gray-100">
+                  <div class="hidden sm:block flex-shrink-0">
+                    <img class="w-32 h-20 object-cover rounded-md" src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2300&q=80" alt="">
+                  </div>
+                  <div class="w-0 flex-1 sm:ml-8">
+                    <h4 class="text-base font-medium text-gray-900 truncate">
+                      FDOT Federal Hwy Infrastructure Update Commission Workshop
+                    </h4>
+                    <p class="mt-1 text-sm text-gray-500">
+                      The Florida Department of Transportation (FDOT) has multiple upcoming projects in the City of Lake Worth Beach. Two of these will occur  <span class="text-purplebeach">Read More...</span>
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-6 text-sm font-medium">
+            <a href="#" class="text-indigo-600 hover:text-indigo-500"> View all News Articles <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Government -->

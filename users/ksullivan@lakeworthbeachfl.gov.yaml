@@ -1,0 +1,26 @@
+name: 'Keith Sullivan'
+super: true
+id: bf43418f-b641-40a9-8284-93dfcbbc3207
+password_hash: $2y$10$L5UMKjW/hQpW/3y1364YoujoPVgMj9wPW2tccyb0AqlzD4e2xIRYq
+preferences:
+  collections:
+    meeting_notices:
+      columns:
+        - title
+        - meeting_date
+    pages:
+      after_save: continue_editing
+    hurricane_and_storm:
+      columns:
+        - title
+        - slug
+        - date
+    employee_directory:
+      columns:
+        - title
+        - phone_number
+        - email_address
+        - employee_title
+        - team
+    city_advisory_boards:
+      after_save: continue_editing

@@ -1,0 +1,95 @@
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="py-16 bg-gray-50 overflow-hidden lg:py-24">
+    <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
+        {{ if hide_primary_feature }}
+        <div class="relative">
+            <div class="grid grid-cols-4 gap-4">
+                <div class="col-span-3">
+                    <h2 class="text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                        {{ feature_title }}</h2>
+                    <p class="mt-4 max-w-3xl text-xl text-gray-500">{{ feature_headline }}</p>
+                </div>
+                <!-- ... -->
+                <div class="pt-8">
+                    <a href="{{ feature_button_url }}" type="button" class="inline-flex items-center px-3 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-mainblue hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 text-center">{{ feature_button_text }}</a>
+                    <p class="text-xs text-black text-center pt-2">Click Here to Download the PDF</p>
+                </div>
+              </div>
+        </div>
+        {{ /if }}
+
+        <div class="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+            <div class="relative">
+                {{ if hide_primary_feature }}
+                <h3 class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">
+                    {{ feature_secondary_heading }}</h3>
+                <p class="mt-3 text-lg text-gray-500">{{ feature_secondary_headline }}</p>
+                {{ /if }}
+                <dl class="mt-10 space-y-10">
+                    {{ feature_bullets }}
+                    {{ if type == "feature_item" }}
+                    <div class="relative">
+                        <dt>
+                            <div
+                                class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-mainblue text-white">
+                                <!-- Heroicon name: outline/globe-alt -->
+                                <i class="fa-solid {{ icon }} fa-fw text-2xl"></i>
+                            </div>
+                            <p class="ml-16 text-lg leading-6 font-medium text-gray-900">{{ heading }}</p>
+                        </dt>
+                        <dd class="mt-2 ml-16 text-base text-gray-500">{{ content }} </dd>
+                    </div>
+                    {{ /if }}
+                    {{ /feature_bullets }}
+                </dl>
+            </div>
+
+
+
+            <div class="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
+                {{ glide :src="feature_one_image" width="600" }}
+                <img class="relative mx-auto rounded-lg" src="{{ url }}" alt="{{ alt }}">
+                {{ /glide }}
+            </div>
+        </div>
+
+   
+
+        <div class="relative mt-12 sm:mt-16 lg:mt-24">
+            <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
+                <div class="lg:col-start-2">
+                    <h3 class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">
+                        {{ feature_bullets_2_headline }}</h3>
+                    <p class="mt-3 text-lg text-gray-500">{{ feature_bullets_2_content }}</p>
+
+                    <dl class="mt-10 space-y-10">
+                        {{ feature_bullets_2 }}
+                        {{ if type == "feature_item" }}
+                        <div class="relative">
+                            <dt>
+                                <div
+                                    class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-mainblue text-white">
+                                    <!-- Heroicon name: outline/globe-alt -->
+                                    <i class="fa-solid {{ icon }} fa-fw text-2xl"></i>
+                                </div>
+                                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">{{ heading }}</p>
+                            </dt>
+                            <dd class="mt-2 ml-16 text-base text-gray-500">{{ content }} </dd>
+                        </div>
+                        {{ /if }}
+                        {{ /feature_bullets_2 }}
+
+
+                    </dl>
+                </div>
+
+                <div class="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1">
+
+                    {{ glide :src="feature_bullets_2_image" width="600" }}
+                    <img class="relative mx-auto rounded-lg" src="{{ url }}" alt="{{ alt }}">
+                    {{ /glide }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

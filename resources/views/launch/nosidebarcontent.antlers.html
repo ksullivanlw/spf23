@@ -1,0 +1,35 @@
+<div class="inset-0 py-6 px-4 sm:px-6 lg:px-8 min-h-screen w-full">
+
+    <!-- Breadcrumb Navigation for Top of Page -->
+    {{ partial:launch/breadcrumbs }}
+    
+    <!-- Title Hero with Title, Details, and a Picture if wanted -->
+    {{ partial:launch/titlehero }}
+
+    <!-- Show Banner at The top Before Content -->
+    {{ if show_banner }}
+        {{ partial:launch/banner}}
+    {{ /if }}
+  
+    <!-- Add Team Member Section like the Commission -->
+    {{ if team_member }}
+        {{ partial:launch/team }}
+    {{ /if }}
+
+    <!-- this is only for the Agendas and Minutes-->
+    {{ if show_agendas }}
+    {{ partial:launch/aandm }}
+    {{ /if }}
+
+    {{ if show_city_calendar }}
+        {{ partial:launch/citycalendar }}
+    {{ /if }}
+
+
+    {{ if show_public_comment }}
+        {{ partial:launch/publiccomment }}
+    {{ /if }}
+
+    <!-- content ends here -->
+
+</div>

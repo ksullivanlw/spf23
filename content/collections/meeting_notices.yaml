@@ -1,0 +1,8 @@
+title: 'Meeting Notices'
+template: default
+layout: layout
+revisions: false
+route: '/meeting-notice/{meeting_type}/{meeting_date}'
+slugs: false
+date: true
+sort_dir: asc

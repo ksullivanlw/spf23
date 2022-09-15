@@ -1,0 +1,443 @@
+<div x-data="{active: 0}" id="schedule">
+    <div class="pt-2 pb-2 bg-gray-50 overflow-hidden" id="mainstage">
+        <div class="max-w-7xl mx-auto px-4 space-y-8 sm:px-6 lg:px-8">
+            <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Event<br>
+                <span class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Schedule / Lineup</span>
+            </h2>
+
+            <!--<div class="sm:hidden">
+                <label for="tabs" class="sr-only">Select a tab</label>
+     
+                
+                <select id="tabs" name="tabs" x-model="active"
+                    class="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                    <option value="0">February 26th, 2022</option>
+
+                    <option value="1">February 27th, 2022</option>
+                </select>
+            </div>-->
+            <div class="">
+                <div class="border-b border-gray-200">
+                    <nav class="-mb-px flex space-x-8" aria-label="Tabs">
+                        <!-- Current: "border-indigo-500 text-indigo-600", Default: "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300" -->
+                        <a href="#" x-on:click.prevent="active = 0"
+                            class="border-indigo-500 text-indigo-600 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm"
+                            aria-current="page">
+                            February 26th, 2022
+                        </a>
+
+                        <a href="#" x-on:click.prevent="active = 1"
+                            class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+                            February 27th, 2022
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pt-2 pb-16 bg-gray-50 overflow-hidden" x-show="active === 0">
+        <div class="max-w-7xl mx-auto px-4 space-y-8 sm:px-6 lg:px-8 grid grid-cols-2 gap-4">
+            <div class="">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase mb-2">
+                    <span class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Main
+                        Stage</span><br><span class="hidden md:block text-gray-500 -mt-6">&nbsp;<br><br></span><span class="md:hidden text-gray-500 mb-12 relative block -mt-1">&nbsp;<br><br></span></h2>
+
+                <div class="bg-white shadow overflow-hidden sm:rounded-md">
+                    <ul role="list" class="divide-y divide-gray-200">
+                        <li>
+                            <div class="block hover:bg-gray-50">
+                                <div class="px-4 py-4 sm:px-6">
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-sm font-medium text-indigo-600 truncate">
+                                            Indigo Dreamers
+                                        </p>
+                                        <!--<div class="ml-2 flex-shrink-0 flex">
+                <p class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                  ACTIVE / CANCELLED
+                </p>
+              </div>-->
+                                    </div>
+                                    <div class="mt-2 sm:flex sm:justify-between">
+                                        <div class="sm:flex">
+                                            <p class="flex items-center text-sm text-gray-500">
+                                                <!-- Heroicon name: solid/users -->
+                                                <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
+                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                                    fill="currentColor" aria-hidden="true">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>
+                                                10:00AM to 1:00PM
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="block hover:bg-gray-50">
+                                <div class="px-4 py-4 sm:px-6">
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-sm font-medium text-indigo-600 truncate">
+                                            Girlfriend Material
+                                        </p>
+                                        <!--<div class="ml-2 flex-shrink-0 flex">
+                <p class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                  ACTIVE / CANCELLED
+                </p>
+              </div>-->
+                                    </div>
+                                    <div class="mt-2 sm:flex sm:justify-between">
+                                        <div class="sm:flex">
+                                            <p class="flex items-center text-sm text-gray-500">
+                                                <!-- Heroicon name: solid/users -->
+                                                <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
+                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                                    fill="currentColor" aria-hidden="true">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>
+                                                2:00PM to 5:00PM
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="block hover:bg-gray-50">
+                                <div class="px-4 py-4 sm:px-6">
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-sm font-medium text-indigo-600 truncate">
+                                            The People Upstairs
+                                        </p>
+                                        <!--<div class="ml-2 flex-shrink-0 flex">
+                <p class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                  ACTIVE / CANCELLED
+                </p>
+              </div>-->
+                                    </div>
+                                    <div class="mt-2 sm:flex sm:justify-between">
+                                        <div class="sm:flex">
+                                            <p class="flex items-center text-sm text-gray-500">
+                                                <!-- Heroicon name: solid/users -->
+                                                <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
+                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                                    fill="currentColor" aria-hidden="true">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>
+                                                6:00PM to 9:00PM
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="my-0 mt-0 mb-0">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase mb-2 -mt-8">
+                    <span class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Satellite
+                        Bistro</span><br><span class="text-gray-500">At Lucerne Ave and J Street</span></h2>
+
+                <div class="bg-white shadow overflow-hidden sm:rounded-md">
+                    <ul role="list" class="divide-y divide-gray-200">
+                        <li>
+                            <div class="block hover:bg-gray-50">
+                                <div class="px-4 py-4 sm:px-6">
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-sm font-medium text-indigo-600 truncate">
+                                            Joe Cruciti
+                                        </p>
+                                        <!--<div class="ml-2 flex-shrink-0 flex">
+            <p class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+              ACTIVE / CANCELLED
+            </p>
+          </div>-->
+                                    </div>
+                                    <div class="mt-2 sm:flex sm:justify-between">
+                                        <div class="sm:flex">
+                                            <p class="flex items-center text-sm text-gray-500">
+                                                <!-- Heroicon name: solid/users -->
+                                                <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
+                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                                    fill="currentColor" aria-hidden="true">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>
+                                                10:00AM to 1:00PM
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="block hover:bg-gray-50">
+                                <div class="px-4 py-4 sm:px-6">
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-sm font-medium text-indigo-600 truncate">
+                                            Luis Gomez
+                                        </p>
+                                        <!--<div class="ml-2 flex-shrink-0 flex">
+            <p class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+              ACTIVE / CANCELLED
+            </p>
+          </div>-->
+                                    </div>
+                                    <div class="mt-2 sm:flex sm:justify-between">
+                                        <div class="sm:flex">
+                                            <p class="flex items-center text-sm text-gray-500">
+                                                <!-- Heroicon name: solid/users -->
+                                                <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
+                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                                    fill="currentColor" aria-hidden="true">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>
+                                                1:00PM to 4:00PM
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="block hover:bg-gray-50">
+                                <div class="px-4 py-4 sm:px-6">
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-sm font-medium text-indigo-600 truncate">
+                                            Bubble Brown
+                                        </p>
+                                        <!--<div class="ml-2 flex-shrink-0 flex">
+            <p class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+              ACTIVE / CANCELLED
+            </p>
+          </div>-->
+                                    </div>
+                                    <div class="mt-2 sm:flex sm:justify-between">
+                                        <div class="sm:flex">
+                                            <p class="flex items-center text-sm text-gray-500">
+                                                <!-- Heroicon name: solid/users -->
+                                                <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
+                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                                    fill="currentColor" aria-hidden="true">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>
+                                                4:00PM to 7:00PM
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <span class="text-xs text-gray-300">**Schedule Subject to Change without Notice</span>
+        </div>
+    </div>
+    <div class="pt-2 pb-16 bg-gray-50 overflow-hidden" x-show="active === 1">
+        <div class="max-w-7xl mx-auto px-4 space-y-8 sm:px-6 lg:px-8 grid grid-cols-2 gap-4">
+            <div class="">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase mb-2">
+                    <span class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Main
+                        Stage</span><br><span class="hidden md:block text-gray-500 -mt-6">&nbsp;<br><br></span><span class="md:hidden text-gray-500 mb-12 relative block -mt-1">&nbsp;<br><br></span>
+
+                <div class="bg-white shadow overflow-hidden sm:rounded-md">
+                    <ul role="list" class="divide-y divide-gray-200">
+                        <li>
+                            <div class="block hover:bg-gray-50">
+                                <div class="px-4 py-4 sm:px-6">
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-sm font-medium text-indigo-600 truncate">
+                                            Revelry
+                                        </p>
+                                        <!--<div class="ml-2 flex-shrink-0 flex">
+                <p class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                  ACTIVE / CANCELLED
+                </p>
+              </div>-->
+                                    </div>
+                                    <div class="mt-2 sm:flex sm:justify-between">
+                                        <div class="sm:flex">
+                                            <p class="flex items-center text-sm text-gray-500">
+                                                <!-- Heroicon name: solid/users -->
+                                                <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
+                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                                    fill="currentColor" aria-hidden="true">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>
+                                                12:00PM to 3:00PM
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="block hover:bg-gray-50">
+                                <div class="px-4 py-4 sm:px-6">
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-sm font-medium text-indigo-600 truncate">
+                                            Tasty Vibrations
+                                        </p>
+                                        <!--<div class="ml-2 flex-shrink-0 flex">
+                <p class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                  ACTIVE / CANCELLED
+                </p>
+              </div>-->
+                                    </div>
+                                    <div class="mt-2 sm:flex sm:justify-between">
+                                        <div class="sm:flex">
+                                            <p class="flex items-center text-sm text-gray-500">
+                                                <!-- Heroicon name: solid/users -->
+                                                <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
+                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                                    fill="currentColor" aria-hidden="true">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>
+                                                4:00PM to 7:00PM
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="my-0 mt-0 mb-0">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase mb-2 -mt-8">
+                    <span class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Satellite
+                        Bistro</span><br><span class="text-gray-500">At Lucerne Ave and J Street</span></h2>
+
+                <div class="bg-white shadow overflow-hidden sm:rounded-md">
+                    <ul role="list" class="divide-y divide-gray-200">
+                        <li>
+                            <div class="block hover:bg-gray-50">
+                                <div class="px-4 py-4 sm:px-6">
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-sm font-medium text-indigo-600 truncate">
+                                            Victoria Cardona
+                                        </p>
+                                        <!--<div class="ml-2 flex-shrink-0 flex">
+            <p class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+              ACTIVE / CANCELLED
+            </p>
+          </div>-->
+                                    </div>
+                                    <div class="mt-2 sm:flex sm:justify-between">
+                                        <div class="sm:flex">
+                                            <p class="flex items-center text-sm text-gray-500">
+                                                <!-- Heroicon name: solid/users -->
+                                                <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
+                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                                    fill="currentColor" aria-hidden="true">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>
+                                                10:00AM to 1:00PM
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="block hover:bg-gray-50">
+                                <div class="px-4 py-4 sm:px-6">
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-sm font-medium text-indigo-600 truncate">
+                                            Jordan Richards
+                                        </p>
+                                        <!--<div class="ml-2 flex-shrink-0 flex">
+            <p class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+              ACTIVE / CANCELLED
+            </p>
+          </div>-->
+                                    </div>
+                                    <div class="mt-2 sm:flex sm:justify-between">
+                                        <div class="sm:flex">
+                                            <p class="flex items-center text-sm text-gray-500">
+                                                <!-- Heroicon name: solid/users -->
+                                                <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
+                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                                    fill="currentColor" aria-hidden="true">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>
+                                                1:00PM to 4:00PM
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="block hover:bg-gray-50">
+                                <div class="px-4 py-4 sm:px-6">
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-sm font-medium text-indigo-600 truncate">
+                                            Rob Arenth
+                                        </p>
+                                        <!--<div class="ml-2 flex-shrink-0 flex">
+            <p class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+              ACTIVE / CANCELLED
+            </p>
+          </div>-->
+                                    </div>
+                                    <div class="mt-2 sm:flex sm:justify-between">
+                                        <div class="sm:flex">
+                                            <p class="flex items-center text-sm text-gray-500">
+                                                <!-- Heroicon name: solid/users -->
+                                                <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
+                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                                    fill="currentColor" aria-hidden="true">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>
+                                                4:00PM to 7:00PM
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <span class="text-xs text-gray-300">**Schedule Subject to Change without Notice</span>
+        </div>
+    </div>
+</div>

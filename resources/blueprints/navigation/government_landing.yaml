@@ -1,0 +1,24 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: detailed_description
+        field:
+          input_type: text
+          antlers: false
+          display: 'detailed description'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: icon
+        field:
+          input_type: text
+          antlers: false
+          display: Icon
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above

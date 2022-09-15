@@ -1,0 +1,784 @@
+title: Page
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          input_type: text
+          localizable: true
+          listable: true
+          display: Title
+          validate:
+            - required
+          width: 75
+      -
+        handle: template
+        field:
+          hide_partials: true
+          blueprint: false
+          display: Template
+          type: template
+          icon: template
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: content_focused
+        field:
+          default: false
+          display: 'Content Focused'
+          type: toggle
+          icon: toggle
+          width: 25
+          listable: hidden
+          instructions_position: above
+      -
+        handle: quick_info
+        field:
+          input_type: text
+          character_limit: 91
+          antlers: false
+          display: 'Quick Info'
+          type: text
+          icon: text
+          instructions: 'Max 90 Characters'
+          listable: hidden
+          instructions_position: above
+      -
+        handle: page_icon
+        field:
+          input_type: text
+          antlers: false
+          display: 'Page Icon'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: hero_text
+        field:
+          antlers: false
+          display: 'Hero Text'
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+      -
+        handle: hero_wallpaper
+        field:
+          mode: list
+          container: assets
+          folder: lwbassets
+          restrict: true
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: 'Hero Wallpaper'
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+      -
+        handle: hero_call_to_action
+        field:
+          display: 'Hero Call To Action'
+          type: section
+          icon: section
+          listable: hidden
+          instructions_position: above
+          width: 75
+      -
+        handle: header_infobox
+        field:
+          default: false
+          display: 'Header InfoBox'
+          type: toggle
+          icon: toggle
+          width: 25
+          listable: hidden
+          instructions_position: above
+      -
+        handle: hero_cta_heading
+        field:
+          input_type: text
+          antlers: false
+          display: 'Hero CTA Heading'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: hero_cta_rich_text
+        field:
+          always_show_set_button: false
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+          container: assets
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          enable_input_rules: true
+          enable_paste_rules: true
+          antlers: false
+          display: 'Hero CTA Rich Text'
+          type: bard
+          icon: bard
+          listable: hidden
+          instructions_position: above
+      -
+        handle: layout
+        field:
+          input_type: text
+          antlers: false
+          display: Layout
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: meta
+        field:
+          type: section
+          instructions: "This entry's meta data."
+          display: Meta
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+          generate: true
+          listable: hidden
+          display: Slug
+          validate:
+            - required
+            - 'unique_entry_value:{collection},{id},{site}'
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true
+      -
+        handle: select_resources
+        field:
+          mode: default
+          display: 'Select Resources'
+          type: structures
+          icon: structures
+          listable: hidden
+          instructions_position: above
+      -
+        handle: show_latest_news
+        field:
+          default: false
+          display: 'Show Latest News'
+          type: toggle
+          icon: toggle
+          listable: hidden
+          instructions_position: above
+      -
+        handle: show_agendas
+        field:
+          default: false
+          display: 'Show Agendas'
+          type: toggle
+          icon: toggle
+          instructions: 'Only for Agendas Page, do not use.'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: show_city_calendar
+        field:
+          default: false
+          display: 'Show City Calendar'
+          type: toggle
+          icon: toggle
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: show_public_comment
+        field:
+          default: false
+          display: 'Show Public Comment'
+          type: toggle
+          icon: toggle
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+  additional_content:
+    display: 'Additional Content'
+    fields:
+      -
+        import: accordion
+      -
+        handle: select_navigation
+        field:
+          mode: default
+          display: 'Select Navigation'
+          type: structures
+          icon: structures
+          listable: hidden
+          instructions_position: above
+      -
+        handle: external_html_block
+        field:
+          antlers: false
+          display: 'External HTML Block'
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+  feature:
+    display: Feature
+    fields:
+      -
+        handle: hide_primary_feature
+        field:
+          default: false
+          display: 'Hide Primary Feature'
+          type: toggle
+          icon: toggle
+          listable: hidden
+          instructions_position: above
+      -
+        handle: feature_title
+        field:
+          input_type: text
+          antlers: false
+          display: 'Feature Title'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: feature_headline
+        field:
+          antlers: false
+          display: 'Feature Headline'
+          type: textarea
+          icon: textarea
+          instructions: 'A Sentence or 2'
+          listable: hidden
+          instructions_position: above
+      -
+        handle: feature_button_text
+        field:
+          input_type: text
+          antlers: false
+          display: 'Feature Button Text'
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+      -
+        handle: feature_button_url
+        field:
+          input_type: text
+          antlers: false
+          display: 'Feature Button URL'
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+      -
+        handle: feature_secondary_heading
+        field:
+          input_type: text
+          antlers: false
+          display: 'Feature Secondary Heading'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: feature_secondary_headline
+        field:
+          antlers: false
+          display: 'Feature Secondary Headline'
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+      -
+        handle: feature_one_image
+        field:
+          mode: list
+          container: assets
+          folder: lwbassets
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          display: 'Feature One Image'
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+      -
+        handle: feature_bullet_item
+        field:
+          display: 'Feature Bullet Item'
+          type: section
+          icon: section
+          listable: hidden
+          instructions_position: above
+      -
+        handle: feature_bullets
+        field:
+          collapse: false
+          sets:
+            feature_item:
+              display: 'Feature Bullets'
+              fields:
+                -
+                  handle: icon
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Icon
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: heading
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Heading
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: content
+                  field:
+                    antlers: false
+                    display: Content
+                    type: textarea
+                    icon: textarea
+                    listable: hidden
+                    instructions_position: above
+          display: 'Feature Bullets'
+          type: replicator
+          icon: replicator
+          instructions: '3 Max'
+          listable: hidden
+          instructions_position: above
+      -
+        handle: second_featured_bulleted_items
+        field:
+          display: 'Second Featured Bulleted Items'
+          type: section
+          icon: section
+          listable: hidden
+          instructions_position: above
+      -
+        handle: feature_bullets_2_headline
+        field:
+          input_type: text
+          antlers: false
+          display: 'Feature Bullets 2 Headline'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: feature_bullets_2_content
+        field:
+          antlers: false
+          display: 'Feature Bullets 2 Content'
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+      -
+        handle: feature_bullets_2_image
+        field:
+          mode: list
+          container: assets
+          folder: lwbassets
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          display: 'Feature Bullets 2 Image'
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+      -
+        handle: feature_bullets_2
+        field:
+          collapse: false
+          sets:
+            feature_item:
+              display: 'Feature Item'
+              fields:
+                -
+                  handle: icon
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Icon
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: heading
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Heading
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: content
+                  field:
+                    antlers: false
+                    display: Content
+                    type: textarea
+                    icon: textarea
+                    listable: hidden
+                    instructions_position: above
+          display: 'Feature Bullets 2'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+  team:
+    display: Team
+    fields:
+      -
+        handle: team_member
+        field:
+          collapse: false
+          sets:
+            member:
+              display: Member
+              fields:
+                -
+                  handle: name
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Name
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: title
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Title
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: portrait
+                  field:
+                    mode: list
+                    container: assets
+                    folder: lwbassets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    display: Portrait
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: email
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: email
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: phone
+                  field:
+                    placeholder: '5551112222'
+                    input_type: text
+                    character_limit: 10
+                    antlers: false
+                    display: Phone
+                    type: text
+                    icon: text
+                    instructions: 'NO SPECIAL CHARACTERS'
+                    listable: hidden
+                    instructions_position: above
+          display: 'Team Member'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+  content_page:
+    display: 'Content Page'
+    fields:
+      -
+        handle: content_blocks
+        field:
+          display: 'Content Blocks'
+          type: section
+          icon: section
+          listable: hidden
+          instructions_position: above
+      -
+        handle: content_block
+        field:
+          collapse: false
+          sets:
+            block_item:
+              display: 'Block Item'
+              fields:
+                -
+                  handle: icon
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Icon
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: heading
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Heading
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: description
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Description
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: url
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: URL
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+          display: 'Content Block'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+      -
+        handle: freeform_content
+        field:
+          always_show_set_button: false
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+            - h1
+            - h4
+            - h5
+            - h6
+            - underline
+            - strikethrough
+            - superscript
+            - subscript
+            - code
+          container: assets
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          enable_input_rules: true
+          enable_paste_rules: true
+          antlers: false
+          display: 'Freeform Content'
+          type: bard
+          icon: bard
+          listable: hidden
+          instructions_position: above
+  seo:
+    display: SEO
+    fields:
+      -
+        import: seo
+  banner:
+    display: Banner
+    fields:
+      -
+        handle: show_banner
+        field:
+          default: false
+          display: 'Show Banner'
+          type: toggle
+          icon: toggle
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: banner_title
+        field:
+          input_type: text
+          antlers: false
+          display: 'Banner Title'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: banner_details
+        field:
+          always_show_set_button: false
+          previews: true
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          enable_input_rules: true
+          enable_paste_rules: true
+          antlers: false
+          remove_empty_nodes: false
+          display: 'Banner Details'
+          type: bard
+          icon: bard
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: banner_first_button
+        field:
+          display: 'Banner First Button'
+          type: section
+          icon: section
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: button_1_text
+        field:
+          input_type: text
+          antlers: false
+          display: 'Button 1 Text'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: button_1_url
+        field:
+          input_type: text
+          antlers: false
+          display: 'Button 1 URL'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: banner_button_2
+        field:
+          display: 'Banner Second Button'
+          type: section
+          icon: section
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: button_2_text
+        field:
+          input_type: text
+          antlers: false
+          display: 'Button 2 Text'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: button_2_url
+        field:
+          input_type: text
+          antlers: false
+          display: 'Button 2 URL'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible

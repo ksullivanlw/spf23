@@ -1,0 +1,137 @@
+title: 'Meeting Notices'
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: false
+          validate:
+            - required
+          instructions_position: above
+          listable: hidden
+          input_type: text
+          antlers: false
+          display: Title
+          instructions: 'Meeting Name (ex: City Commission Work Session)'
+      -
+        handle: meeting_type
+        field:
+          options:
+            city-commission: 'City Commission'
+            special-magistrate: 'Special Magistrate'
+            historic-preservation-resources-board: 'Historic Preservation Resources Board'
+            planning-and-zoning-board: 'Planning and Zoning Board'
+            library-advisory-board: 'Library Advisory Board'
+            recreation-advisory-board: 'Recreation Advisory Board'
+          multiple: false
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          display: 'Meeting Type'
+          type: select
+          icon: select
+          listable: hidden
+          instructions_position: above
+      -
+        handle: meeting_date
+        field:
+          mode: single
+          time_enabled: false
+          time_required: false
+          earliest_date: '2022-02-22'
+          full_width: false
+          inline: false
+          columns: 1
+          rows: 1
+          display: 'Meeting Date'
+          type: date
+          icon: date
+          listable: hidden
+          instructions_position: above
+      -
+        handle: meeting_start_time
+        field:
+          display: 'Meeting Start Time'
+          type: time
+          icon: time
+          listable: hidden
+          instructions_position: above
+      -
+        handle: content
+        field:
+          always_show_set_button: false
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+            - h1
+            - h4
+            - h5
+            - h6
+            - underline
+            - strikethrough
+            - superscript
+            - subscript
+          container: assets
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          enable_input_rules: true
+          enable_paste_rules: true
+          antlers: false
+          display: Content
+          type: bard
+          icon: bard
+          listable: hidden
+          instructions_position: above
+      -
+        handle: related_documents
+        field:
+          mode: list
+          container: assets
+          folder: main/meeting-documents
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          display: 'Related Documents'
+          type: assets
+          icon: assets
+          instructions: 'Please attach any related documents here'
+          listable: hidden
+          instructions_position: above
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+          instructions_position: above
+          listable: hidden
+          generate: true
+      -
+        handle: date
+        field:
+          type: date
+          required: true
+          validate:
+            - required

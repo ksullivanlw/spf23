@@ -1,0 +1,67 @@
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js"></script>
+
+<script>
+
+//Create Todays Date For The Calendar
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+today = yyyy + '-' + mm + '-' + dd;
+
+</script>
+
+<div
+    x-data="{
+        calendar: null,
+        events: [
+        {{ collection:calendar_and_special_events }}
+            {
+                id: '{{id}}',
+                title: '{{ title }}',
+                start: '{{ start_date format='Y-m-d' }}',
+                end: '{{ end_date format='Y-m-d' }}',
+            },
+        {{ /collection:calendar_and_special_events }}
+        ],
+        newEventTitle: null,
+        newEventStart: null,
+        newEventEnd: null,
+        init() {
+            this.calendar = new FullCalendar.Calendar(this.$refs.calendar, {
+                events: (info, success) => success(this.events),
+                initialDate: today,
+                initialView: 'dayGridMonth',
+                selectable: true,
+                unselectAuto: false,
+                editable: false,
+                select: (info) => {
+                    this.newEventStart = info.startStr
+                    this.newEventEnd = info.endStr
+                },
+                {{ collection:calendar_and_special_events }}
+                eventClick: (info) => {
+                   
+                },
+                {{ /collection:calendar_and_special_events }}
+            })
+
+            this.calendar.render()
+        },
+        getEventIndex(info) {
+            return this.events.findIndex((event) => event.id == info.event.id)
+        },
+    }"
+>
+    <div x-ref="calendar" class=""></div>
+
+    <h2 class="mt-8 font-bold">List of events</h2>
+    <ul class="mt-1 list-inside list-disc text-sm text-gray-500">
+        <template x-for="event in events" :key="event.id">
+            <li x-text="`${event.title}: ${event.start} ${(event.end ? ' through ' + event.end : '')}`"></li>
+        </template>
+    </ul>
+
+</div>

@@ -1,0 +1,21 @@
+tree:
+  -
+    id: db6ab796-46a8-4e34-9a0a-cf69e8cb2caf
+    title: 'General Information'
+    url: '#'
+  -
+    id: 092d944d-73d6-464d-8c78-67f93e5fcf42
+    title: 'Collection Schedules'
+    url: '#'
+  -
+    id: 405527d8-5bf0-4255-943e-8e9958279397
+    title: 'Garbage and Recycling'
+    url: '#'
+  -
+    id: cfaaf1bb-4e27-46ab-9702-367a17e93ef7
+    title: 'Traffic Calming Policy'
+    url: '#'
+  -
+    id: e22be122-a8a2-48ec-a866-37865505efd8
+    title: 'Neighborhood Roads Program'
+    url: '#'

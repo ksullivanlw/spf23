@@ -1,0 +1,21 @@
+tree:
+  -
+    id: c1379e3e-f6cf-4d6d-adca-9874f9dc8182
+    title: 'Bids & Opportunities'
+    url: 'https://lakeworthbeachfl.bidsandtenders.net/Module/Tenders/en/Home/BidsHomepage'
+  -
+    id: 4fa972dd-3128-4a19-8575-d69da040fe8a
+    title: 'Capital Improvement Projects'
+    url: '#'
+  -
+    id: 1e8fcb07-5086-4da7-b75c-5ea2afc03780
+    title: 'FY21-22 Schedule of Fees'
+    url: '#'
+  -
+    id: 2dc24e8f-ef5f-4933-9daf-cb3eb95df8ed
+    title: 'FY 21 Budget Book'
+    url: '#'
+  -
+    id: 627efd7c-d450-40e7-9760-493b5a73136a
+    title: 'FY21 Annual Comprehensive Financial Report'
+    url: '#'

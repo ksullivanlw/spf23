@@ -1,0 +1,11 @@
+{{ partial:2022/pagehero }}
+{{ partial:2022/barmenu }}
+{{ partial:2022/sectionblog }}
+{{ partial:2022/ctaonebut }}
+    {{ if team_members }}
+        {{ partial:2022/team }}
+    {{ /if }}
+    {{ if get_in_touch_toggle }}
+        {{ partial:2022/getintouch }}
+    {{ /if }}
+{{ partial:2022/newsletter }}

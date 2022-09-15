@@ -1,0 +1,13 @@
+tree:
+  -
+    id: f3d8a5e1-0b37-4361-bbc4-2199a3169db2
+    title: 'Agendas and Minutes'
+    url: '#'
+  -
+    id: 4bc9dd12-8d82-4403-9474-5396a1c46108
+    title: 'Watch Online'
+    url: 'https://www.youtube.com/c/CityofLakeWorthBeach'
+  -
+    id: d76f1192-10d8-4dcd-8949-efe3855c29e7
+    title: 'Public Comment'
+    url: '#'

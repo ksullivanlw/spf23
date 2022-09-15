@@ -1,0 +1,9 @@
+<div class="bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between sm:px-6 lg:px-8 rounded-lg">
+    {{ if current_url | contains:advisory-board }}    
+        {{ partial:launch/advisoryboardblocks }}
+        {{ else }}
+        {{ partial:launch/nosidebarcontent }}
+    {{ /if }}
+    </div>
+</div>

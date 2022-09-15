@@ -1,0 +1,6 @@
+name: abctest
+roles:
+  - editor
+groups:
+  - library
+id: e0cbb24c-654c-4c36-97e8-3d0467ab086c

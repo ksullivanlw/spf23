@@ -1,0 +1,167 @@
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="bg-gray-50">
+    <!-- Header -->
+    <div class="relative pb-2 bg-gray-800">
+        <div class="absolute inset-0">
+            <img class="w-full h-full object-cover"
+                src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100"
+                alt="">
+            <div class="absolute inset-0 bg-gray-800 mix-blend-multiply" aria-hidden="true"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">{{ title }}</h1>
+        </div>
+    </div>
+
+    <!-- Overlapping cards -->
+    <section class="-mt-16 max-w-7xl mx-auto relative z-10 pb-2 px-4 sm:px-6 lg:px-8"
+        aria-labelledby="contact-heading">
+        <h2 class="sr-only" id="contact-heading">Contact us</h2>
+        <div class="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
+
+            {{ nav:government_landing }}
+            <a href="{{ url }}" class="mb-12">
+                <div class="flex flex-col bg-white rounded-2xl shadow-md hover:bg-gray-100 min-h-full pb-12">
+                    <div class="flex-1 relative pt-16 px-6 pb-8 md:px-8">
+                        <div
+                            class="absolute top-0 p-4 inline-block bg-bluebeach rounded-xl shadow-lg transform -translate-y-1/2">
+                            <i class="text-white text-2xl fa-solid {{ icon }}"></i>
+                        </div>
+                        <h3 class="text-xl font-medium text-gray-900">{{ title }}</h3>
+                       
+                    </div>
+                    <!--<div class="p-6 bg-gray-50 rounded-bl-2xl rounded-br-2xl md:px-8">
+            <a href="#" class="text-base font-medium text-indigo-700 hover:text-indigo-600">Contact us<span aria-hidden="true"> &rarr;</span></a>
+          </div>-->
+                </div>
+            </a>
+            {{ /nav:government_landing }}
+        </div>
+    </section>
+</div>
+
+<div class="bg-gray-800">
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center">
+      <div class="lg:w-0 lg:flex-1">
+        <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl" id="newsletter-headline">Sign up for our newsletter</h2>
+        <p class="mt-3 max-w-3xl text-lg leading-6 text-gray-300">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui Lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat.</p>
+      </div>
+      <div class="mt-8 lg:mt-0 lg:ml-8">
+        <form class="sm:flex">
+          <label for="email-address" class="sr-only">Email address</label>
+          <input id="email-address" name="email-address" type="email" autocomplete="email" required class="w-full px-5 py-3 border border-transparent placeholder-gray-500 focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white focus:border-white sm:max-w-xs rounded-md" placeholder="Enter your email">
+          <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+            <button type="submit" class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-bluebeach hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500">Notify me</button>
+          </div>
+        </form>
+        <p class="mt-3 text-sm text-gray-300">
+          We care about the protection of your data. Read our
+          <a href="#" class="text-white font-medium underline"> Privacy Policy. </a>
+        </p>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+<div class="bg-gray-50">
+<div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center relative">
+    <div class="absolute inset-0">
+      <div class="bg-gray-50 h-1/3 sm:h-2/3"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto">
+      <div class="text-left">
+        <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">Government Events</h2>
+      </div>
+      <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+       
+        <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+          <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+            <div class="flex-1 relative">
+                <div class="flex items-center">
+                    <div class="mb-4">
+                      <div class="flex space-x-1 text-sm text-gray-500 text-2xl uppercase font-extrabold text-bluebeach">
+                        <time datetime="2020-03-16"> Mar 16, 2020 </time>
+                      </div>
+                    </div>
+                  </div>
+                  
+              <a href="#" class="block mt-2">
+                <p class="text-xl font-semibold text-gray-900">Regular Commission Meeting</p>
+                <div class="flex mt-4">
+                    <div class="mr-4 flex-shrink-0 self-center">
+                        <i class="fa-solid fa-clock text-bluebeach"></i>
+                    </div>
+                    <div>
+                      <p class="mt-1 text-gray-500">Meeting Starts at 6:00PM</p>
+                    </div>
+                  </div>
+                <div class="flex mt-4">
+                    <div class="mr-4 flex-shrink-0 self-center">
+                        <i class="fa-solid fa-location-dot text-bluebeach"></i>
+                    </div>
+                    <div>
+                      <p class="mt-1 text-gray-500">City Hall 7 North Dixie Highway, Lake Worth Beach FL, 33460</p>
+                    </div>
+                  </div>
+                <p class="mt-3 text-base text-gray-500 pb-24"></p>
+              </a>
+            
+            <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-normal bg-lighterblue text-indigo-800 bottom-2 right-2 absolute"> Commission Meeting </span>
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+              <div class="flex-1 relative">
+                  <div class="flex items-center">
+                      <div class="mb-4">
+                        <div class="flex space-x-1 text-sm text-gray-500 text-2xl uppercase font-extrabold text-bluebeach">
+                          <time datetime="2020-03-16"> April 26, 2020 </time>
+                        </div>
+                      </div>
+                    </div>
+                    
+                <a href="#" class="block mt-2">
+                  <p class="text-xl font-semibold text-gray-900">Utility Commission Meeting</p>
+                  <p class="mt-3 text-base text-gray-500 pb-24">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.</p>
+                </a>
+              
+              <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-normal bg-lighterblue text-indigo-800 bottom-2 right-2 absolute"> Utility Meeting </span>
+                
+              </div>
+            </div>
+          </div>
+        
+          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+              <div class="flex-1 relative">
+                  <div class="flex items-center">
+                      <div class="mb-4">
+                        <div class="flex space-x-1 text-sm text-gray-500 text-2xl uppercase font-extrabold text-bluebeach">
+                          <time datetime="2020-03-16"> April 26, 2020 </time>
+                        </div>
+                      </div>
+                    </div>
+                    
+                <a href="#" class="block mt-2">
+                  <p class="text-xl font-semibold text-gray-900">Special Commission Meeting</p>
+                  <p class="mt-3 text-base text-gray-500 pb-24">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.</p>
+                </a>
+              
+              <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-normal bg-lighterblue text-indigo-800 bottom-2 right-2 absolute"> Special Commission Meeting </span>
+                
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{{ partial:2022/teamv1 }}

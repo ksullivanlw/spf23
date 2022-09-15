@@ -1,0 +1,10 @@
+title: Contact
+honeypot: fax
+email:
+  -
+    to: lbennett@lakeworthbeachfl.gov
+    from: noreply@lakeworthbeachfl.gov
+    reply_to: '{{ email }}'
+    subject: 'Contact Form - LWB Street Painting Festival'
+    html: email/form_owner
+    text: email/form_owner_text

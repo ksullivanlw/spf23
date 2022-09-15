@@ -1,0 +1,13 @@
+tree:
+  -
+    id: abeee700-5774-4f30-a09c-004d21933d2a
+    title: 'General Information'
+    url: '#'
+  -
+    id: fb937099-99b3-4189-bfbf-7b5180701ed8
+    title: 'Tee Times'
+    url: '#'
+  -
+    id: fc63d8b7-9abe-4819-9c11-71e9d1a0d0ae
+    title: Memberships
+    url: '#'

@@ -1,0 +1,45 @@
+tree:
+  -
+    id: 3bdb2884-02fc-4c34-9ed7-3fa37caaaafa
+    title: 'C-51 Canal'
+    url: '#'
+  -
+    id: 5a27805c-c609-4d40-accf-12023f24ef45
+    title: 'Construction Board of Adjustment and Appeals'
+    url: '#'
+  -
+    id: db054ba9-0215-49cd-a4a3-f67f0b032827
+    title: 'Community Redevelopment Agence'
+    url: 'https://www.lakeworthcra.org/'
+  -
+    id: 6a10eef2-055a-4573-aadb-5cd905518add
+    title: 'Tree Board'
+    url: '#'
+  -
+    id: 82245c51-9f01-4413-8930-bbe6d8d76e15
+    title: 'Education Task Force'
+    url: '#'
+  -
+    id: 4c492ca5-10ac-4b92-a4a4-7cdd588ba019
+    title: 'Electric Utility Board'
+    url: '#'
+  -
+    id: 0cf8e4dc-4f9a-4e02-b058-fa2caf1a03f6
+    title: 'Finance Advisory Board'
+    url: '#'
+  -
+    id: 0e3ca2e6-9cff-4d91-86ae-49c3fecabf16
+    title: 'Historic Resources Preservation Board'
+    url: '#'
+  -
+    id: cc7b3a68-b337-4c0b-8ab1-98f744b13602
+    title: 'Library Board'
+    url: '#'
+  -
+    id: 3b80825e-e416-4a19-bd46-6d1205e86829
+    title: 'Planning and Zoning Board'
+    url: '#'
+  -
+    id: 40fdb9f3-fb64-44ea-a710-0d08b0925b62
+    title: 'Recreation Advisory Board'
+    url: '#'

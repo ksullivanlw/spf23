@@ -1,0 +1,32 @@
+tree:
+  -
+    id: 74a4312c-1510-4b80-beeb-58fcdb035b80
+    title: 'General Information'
+    url: '#'
+  -
+    id: 29a42d47-16dd-4589-af45-1b0a869567dd
+    title: 'Boil Water Notices'
+    url: '#'
+  -
+    id: db706905-e0da-43dc-8e3b-0661d2dccb52
+    title: 'Drinking Water Quality Report'
+    url: '#'
+  -
+    id: 9ab4aeb7-720f-4c4f-9391-abda220ab084
+    title: 'Stormwater Rate Resolution'
+    url: '#'
+  -
+    id: b0832d7e-a17a-43ff-a560-1ec4983b95c8
+    title: 'Local Sewer Rate Resolution'
+  -
+    id: 52eac1bf-2958-496c-b41a-1197e40e1562
+    title: 'Water Rate Resolution'
+    url: '#'
+  -
+    id: 67ef1393-5405-4008-afa2-14caebec830f
+    title: 'Procedures & Manuals'
+    url: '#'
+  -
+    id: c95b6a97-647c-45f0-afe9-e619d0c8fbfd
+    title: 'Start Service'
+    url: '#'

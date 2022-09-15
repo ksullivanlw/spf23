@@ -1,0 +1,10 @@
+title: 'Hurricane and Storm'
+template: default
+layout: 2022/stormpage
+revisions: false
+route: '/hurricane-and-storm/{slug}'
+date: true
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
