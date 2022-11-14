@@ -277,20 +277,8 @@
         </div>
         <div class="bg-white py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
             <div class="max-w-lg mx-auto lg:max-w-none">
-                {{ form:contact }}
-                {{ if success }}
-                <div class="bg-green-300 text-white p-2">
-                    {{ success }}
-                </div>
-                {{ else }}
-
-                {{ if errors }}
-                <div class="bg-red-300 text-white p-2">
-                    {{ errors }}
-                    {{ value }}<br>
-                    {{ /errors }}
-                </div>
-                {{ /if }}
+               
+                <form action="https://getform.io/f/1a8c85b7-43b8-4e55-b5cd-c7bab715ba82" method="POST">
                 <div class="grid grid-cols-1 gap-y-6">
                     <div>
                         <label for="name" class="sr-only">Full name</label>
@@ -323,8 +311,8 @@
                         </button>
                     </div>
                 </div>
-                {{ /if }}
-                {{ /form:contact }}
+            </form>
+            
             </div>
         </div>
     </div>
